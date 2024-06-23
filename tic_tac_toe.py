@@ -5,7 +5,7 @@ class TicTacToe:
         self.columns = columns
 
         self.username = input("Hello, what's your name ?\n").strip()
-        self.user_symbol = input('Choose a symbol between "X" and "O".\n\n').upper()
+        self.user_symbol = input('Choose a symbol between "X" and "O".\n').upper()
         
         while self.user_symbol not in ["O", "X"]:
             print("Your symbol need to be either O or X.")
@@ -16,7 +16,9 @@ class TicTacToe:
         self.grid = [["_"] * self.columns for _ in range(self.lines)]
 
         print(f"Hello {self.username}, your symbol is {self.user_symbol}.\n")
-        print("Example: 1, 3 to play on line 1, column 3")
+        print("How to play ?")
+        print("You need to enter the line and the column on which you want to play. We start indexes from 1.")
+        print('Example: "1, 3" to play on line 1, column 3.\n')
 
     def __str__(self) -> str:
         string_rep = ""
